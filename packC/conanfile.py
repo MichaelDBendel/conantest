@@ -43,8 +43,12 @@ class ccRecipe(ConanFile):
         cmake = CMake(self)
         cmake.configure()
         cmake.build()
-        test_folder = pathlib.Path.cwd().joinpath("unittest").joinpath("Release")
-        self.run(f"{test_folder.joinpath('ccTest.exe')}")
+        if self.settings.os == "Windows":
+            test_folder = pathlib.Path.cwd().joinpath("unittest").joinpath("Release")
+            self.run(f"{test_folder.joinpath('ccTest.exe')}")
+        else:
+            test_folder = pathlib.Path.cwd().joinpath("unittest")
+            self.run(f"{test_folder.joinpath('ccTest')}")
 
     def package(self):
         cmake = CMake(self)
