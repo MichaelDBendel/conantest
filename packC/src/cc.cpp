@@ -1,12 +1,13 @@
 #include <iostream>
 #include "cc.h"
 #include "bb.h"
+#include "xx.h"
 
 
 
 void cc(){
     bb();
-    
+    xx();
 
     #ifdef NDEBUG
     std::cout << "cc/1.0: Hello World Release!\n";

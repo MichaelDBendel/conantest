@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include "aa.h"
+#include "xx.h"
 
 
 #ifdef _WIN32

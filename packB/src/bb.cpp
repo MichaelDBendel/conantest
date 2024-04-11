@@ -5,7 +5,7 @@
 
 void bb(){
     aa();
-    
+    xx();
 
     #ifdef NDEBUG
     std::cout << "bb/1.0: Hello World Release!\n";

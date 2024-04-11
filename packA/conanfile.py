@@ -50,7 +50,8 @@ class aaRecipe(ConanFile):
     def package_info(self):
         self.cpp_info.libs = ["aa"]
 
-    
+    def requirements(self):
+        self.requires("xx/1.0", transitive_headers=True)
 
     
 
